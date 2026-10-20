@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurnila Sabini | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#home" class="logo">PORTFOLIO<span class="dot">.</span></a>
+            
+            <button id="hamburger" class="hamburger" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="navLinks" class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">WELCOME TO MY SPACE</p>
+            <h1>Hi, I'm <span class="highlight">Nurnila Sabini</span></h1>
+            <p>I am <span id="typingEffect"></span></p>
+            <a href="#projects" class="btn">Explore Projects</a>
+        </div>
+    </section>
+
+    <!-- 2. About Me Section (With Profile Picture) -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-img-box">
+                    <!-- Pastikan nama fail gambar profil anda bernama profile.jpg -->
+                    <img src="nila convo.jpeg" alt="Gambar profil Nurnila Sabini" class="profile-img">
+                </div>
+                <div class="about-text-box">
+                    <p class="about-text">
+                        Welcome to my digital portfolio! I am a Computer Science student specializing in Multimedia Computing. I love crafting clean, interactive, and futuristic web experiences using HTML, CSS, and modern JavaScript.
+                    </p>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (Vanilla)</li>
+                            <li>UI/UX Prototyping</li>
+                            <li>Java & Swing GUI</li>
+                            <li>SQL & Database Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Projects Section (5 Projects with Fitted Images) -->
+    <section id="projects" class="section alt-bg">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="kinkou.jpg" alt="Screenshot of StringEncoderGUI project" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="badge">Java / GUI</span>
+                        <h3>StringEncoderGUI</h3>
+                        <p>A Java-based desktop graphical user interface application built using Swing components to validate and process text inputs.</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="project2.jpg" alt="Screenshot of Sustainable Sea Life App project" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="badge">Mobile / UI</span>
+                        <h3>Sustainable Sea Life App</h3>
+                        <p>An interactive mobile-formatted Java Swing application focused on UN Sustainable Development Goal 14 (Life Below Water).</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="project3.jpg" alt="Screenshot of Kinkou Prototype project" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="badge">Mobile / UI</span>
+                        <h3>Kinkou Prototype</h3>
+                        <p>A stress and workload management mobile application prototype developed for student well-being during hackathons.</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="project4.jpg" alt="Screenshot of Round Robin CPU Scheduler project" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="badge">Graphics / C++</span>
+                        <h3>Round Robin CPU Scheduler</h3>
+                        <p>A C++ simulation program modeling CPU process scheduling algorithms with context switch overhead calculations.</p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-img-box">
+                        <img src="project5.jpg" alt="Screenshot of 3D Video Game Project" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <span class="badge">Graphics / C++</span>
+                        <h3>3D Video Game Project</h3>
+                        <p>A 3D interactive video game project developed using computer graphics 2D/3D matrix transformations and OpenGL routines.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+        </div>
+    </section>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" class="scroll-btn" aria-label="Scroll to top">↑</button>
+
+    <footer>
+        <p>&copy; 2026 Nurnila Sabini. Built with HTML, CSS, & JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
